@@ -1,1 +1,1 @@
-include ':InfiniteList', ':test'
+include ':InfiniteList', ':test', ':mvvm'

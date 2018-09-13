@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools">
     <data>
         <variable
-            name="DataBean"
+            name="dataBean"
             type="com.me.cl.datingapp.Date.DataBean"/>
     </data>
 
@@ -18,40 +18,45 @@
 
 
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/iv_photo"
             android:layout_width="0dp"
             android:layout_height="200dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@android:drawable/alert_dark_frame" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="@{DataBean.getUsername()}"
-            app:layout_constraintTop_toBottomOf="@+id/imageView"
-            tools:layout_editor_absoluteX="162dp" />
+            android:text="@{dataBean.username}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_photo" />
 
         <TextView
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="@{DataBean.getLocation()}"
-            app:layout_constraintTop_toBottomOf="@+id/textView"
-            tools:layout_editor_absoluteX="162dp" />
+            android:text="@{dataBean.location.city_name}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
 
         <TextView
             android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="TextView"
-            app:layout_constraintTop_toBottomOf="@+id/textView2"
-            tools:layout_editor_absoluteX="162dp" />
+            android:text="@{dataBean.gender}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
         <TextView
             android:id="@+id/textView4"
@@ -59,10 +64,12 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:layout_marginTop="8dp"
-            android:text="TextView"
+            android:text="@{dataBean.is_online}"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView3"
-            tools:layout_editor_absoluteX="162dp" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" />
     </android.support.constraint.ConstraintLayout>
 </android.support.v7.widget.CardView>
 
